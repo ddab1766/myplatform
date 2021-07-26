@@ -1,0 +1,21 @@
+{% load account %}
+{% user_display user as user_display %}
+{% load i18n %}
+{% autoescape off %}
+
+{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}
+
+안녕하세요.
+채용마켓에 가입해주셔서 감사합니다.
+
+이메일({{ user_display }}) 확인을 위해 메일인증절차를 진행하고 있습니다.
+아래 주소를 클릭하시면 메일인증이 완료됩니다.
+{{ activate_url }}
+
+{% endblocktrans %}
+
+{% endautoescape %}
+{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}
+
+감사합니다.
+{% endblocktrans %}

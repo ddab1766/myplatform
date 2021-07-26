@@ -1,0 +1,57 @@
+# [START django_app]
+#runtime: python37
+
+runtime: python
+env: flex
+#entrypoint: gunicorn -b :$PORT main:app
+#entrypoint: daphne -b 0.0.0.0 -p 8080 myplatform.asgi:application
+entrypoint: daphne myplatform.asgi:application --port $PORT --bind 0.0.0.0
+
+runtime_config:
+  python_version: 3
+
+manual_scaling:
+  instances: 1
+
+handlers:
+# This configures Google App Engine to serve the files in the app's static
+# directory.
+- url: /static
+  static_dir: static/
+
+# This handler routes all requests not caught above to your main app. It is
+# required when static routes are defined, but can be omitted (along with
+# the entire handlers section) when there are no static files defined.
+- url: /.*
+  script: auto
+  secure: always
+# [END django_app]
+
+#instance_class: F4
+#resources:
+# cpu: 4
+#  memory_gb: 16
+#  disk_size_gb: 30
+
+# Update with Redis instance network name
+network:
+  name: default
+#[END memorystore_app_yaml_flex]
+
+beta_settings:
+      cloud_sql_instances: 'chaema-316302:asia-northeast3:chaema'
+
+# Update with Redis instance details
+#  REDISHOST: '10.154.142.51'
+#  GCLOUD_STORAGE_BUCKET: 'chaema-312901.appspot.com'
+env_variables:
+  REDISHOST: '10.202.28.91'
+  REDISPORT: '6379'
+  GCLOUD_STORAGE_BUCKET: 'chaema-316302.appspot.com'
+
+#vpc_access_connector:
+#  name: projects/chaema/locations/asia-northeast3/connectors/redis
+#
+#automatic_scaling:
+#  min_num_instances: 1
+#  max_num_instances: 15

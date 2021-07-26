@@ -1,0 +1,153 @@
+$blue: #0084ff;
+$white: #fff;
+$grey: #eee;
+
+.chat {
+  height: 90vh;
+  .header {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #fff;
+    padding: 0 1.5rem;
+    height: 3.625rem;
+    align-items: center;
+    border-bottom: .0625rem solid #f2f2f2;
+    border-top: .0625rem solid #f2f2f2;
+  }
+  .container {
+    //padding: 0 30px;
+    height: 80%;
+
+    &.message-form {
+      height: 10%;
+      //margin-top: 5%;
+    }
+  }
+
+  span {
+    float: right;
+    align-self: flex-end;
+    font-size: 12px;
+  }
+
+  h1,h3 {
+    margin-top: 0;
+    color: $blue;
+  }
+
+  input {
+    color: #7e99a0;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 19px;
+    padding: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 80%;
+    float: left;
+  }
+
+  button {
+    background-color: $blue;
+    border-color: $blue;
+    border-style: solid;
+    color: white;
+    font-size: 1em;
+    padding: 5px;
+    width: 20%;
+    float: left;
+  }
+
+  ul{
+    list-style: none;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+    height: 80%;
+  }
+
+  ul li{
+    clear: both;
+    display: block;
+    margin-bottom: 5px;
+    max-width: 47%;
+    min-width: 8%;
+
+    p {
+      border-radius: 100px / 50px;
+      padding: 5px 20px;
+      margin: 0;
+    }
+
+    .author {
+      color: grey;
+      display: inline-block;
+      text-align: center;
+      padding: 5px;
+      margin: 0 2%;
+      font-weight: 300;
+      font-size: 12px;
+    }
+  }
+
+  .him {
+    margin-left: 20px;
+    float: left;
+    text-align: left;
+    //display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end!important;
+
+    p {
+      background: $grey;
+    }
+
+
+  }
+
+  .admin {
+    margin: auto;
+    text-align: center;
+    p {
+      background: $grey;
+    }
+  }
+
+  .me {
+    margin-right: 10px;
+    margin-top: 10px;
+    float: right;
+    text-align: right;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end!important;
+
+    .author {
+      display: none;
+    }
+
+    p {
+      background: $grey;
+      //color: $white;
+    }
+  }
+
+  .him + .me{
+    p {
+      //border-bottom-right-radius: 5px;
+    }
+  }
+
+  .me + .me{
+    p {
+      //border-top-right-radius: 5px;
+      //border-bottom-right-radius: 5px;
+    }
+  }
+
+  .me:last-of-type {
+    p {
+      //border-bottom-right-radius: 30px;
+    }
+  }
+}

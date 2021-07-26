@@ -1,0 +1,32 @@
+/*@font-face {*/
+/*    font-family: "RECIPEKOREA";*/
+/*    font-weight: 200;*/
+/*    src: url("../fonts/RECIPEKOREA.ttf") format("truetype");*/
+/*}*/
+.section2, .section4{
+    /*text-shadow: #000 1px 0 10px;*/
+    /*color:white;*/
+    /*background-color: #4f9cba !important;*/
+    /*background-image: linear-gradient(to right, #287694 0%, #287695 50%, #4f9cba 75%, #4f9cba 100%) !important;*/
+}
+.section1, .section3{
+    color:black;
+    background-color: #ffffff !important;
+}
+.section-title{
+    font-weight:bold;
+    font-size:40px;
+}
+.section-descrip{
+    font-size:20px;
+}
+.section-descrip-lg{
+    font-size:30px;
+}
+.section1, .section2, .section3, .section4{
+    padding:160px 0 !important;
+}
+.section .download-area{
+    /* border:1px solid; */
+}
+

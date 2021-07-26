@@ -1,0 +1,12 @@
+export { default as heroBackground } from './bg-hero.jpg';
+export { default as heroBackground1 } from './sec-bg.jpg';
+export { default as manageImage1 } from './img-manage-01.JPG';
+export { default as manageImage2 } from './img-manage-02.JPG';
+export { default as manageImage3 } from './img-manage-03.JPG';
+export { default as worksImage01 } from './img-works-01.jpg';
+export { default as worksImage02 } from './img-works-02.jpg';
+export { default as worksImage03 } from './img-works-03.jpg';
+export { default as contactImage } from './img-contact.jpg';
+export { default as serviceImage01 } from './coach.svg';
+export { default as serviceImage02 } from './man.svg';
+export { default as serviceImage03 } from './network.svg';

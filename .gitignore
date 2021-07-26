@@ -1,0 +1,5 @@
+tmp/
+frontend/node_modules/
+static/
+media/
+*.pyc
